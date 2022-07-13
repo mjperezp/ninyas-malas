@@ -1,0 +1,292 @@
+
+.nav__link
+  text-decoration: none
+  font-weight: bold
+  color: #151515
+  font-size: .8rem
+
+.landing
+  display: grid
+  grid-template-columns: 1fr 30rem 1fr
+  &__texts
+    grid-column: 2 / 3
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+
+//Cookies//
+
+@keyframes aniCookies
+  from
+    bottom: -40rem
+
+  to
+    bottom: 0
+
+.modal-cookies
+  z-index: 9999999999
+  background-color: #151515
+  color: #ffffff
+  position: fixed
+  bottom: 0
+  width: 100%
+  padding: 3rem
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: 1rem
+  font-size: .8rem
+  &__link
+    color: #E87356
+  &__buttons
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 1rem
+  &__button
+    border: 1px solid #E87356
+    background-color: #151515
+    border-radius: .2rem
+    padding: .5rem 1rem
+    color: #E87356
+    &-accept
+      background-color: #E87356
+      border: none
+      border-radius: .2rem
+      padding: .5rem 1rem
+      font-weight: 600
+
+.cookies
+  position: fixed
+  bottom: -40rem
+  animation-name: aniCookies
+  animation-timing-function: ease-in-out
+  animation-delay: 2s
+  animation-duration: .6s
+  animation-fill-mode: forwards
+
+.hide
+  display: none
+
+//Fin cookies//
+
+//Sección 01: Presentación//
+
+.intro
+  display: grid
+  grid-template-columns: 1fr 23rem 1fr
+  padding-top: 10rem
+  margin-bottom: 3rem
+  &__block
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: start
+    gap: 1rem
+  &__img
+    position: relative
+    left: -6rem
+    box-sizing: border-box
+  &__block-description
+    font-weight: 300
+
+.logo-img
+  width: 14rem
+  padding-bottom: 2rem
+
+//Fin sección 01: Presentación//
+
+//Sección 02: Catálogo//
+
+.catalogue
+  text-align: center
+  &__grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 2rem
+    margin-top: 3rem
+    margin-bottom: 3rem
+    padding: 0
+  &__card
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    gap: 2rem
+    &-img
+      width: 100%
+      height: 16rem
+    &-border
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      border: 1px solid #FBE879
+      border-radius: .2rem
+      height: 30rem
+      width: 100%
+    &-title
+      padding-top: 2rem
+      font-size: 1rem
+      font-weight: 500
+      width: 10rem
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      &:hover
+        color: #E14D27
+    &-author
+      width: 10rem
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      a
+        transition: .2s
+        &:hover
+          text-decoration: underline
+          text-decoration-thickness: 2px
+          text-decoration-color: #E14D27
+    &-price
+      font-size: 1.2rem
+      font-weight: 800
+
+//Fin sección 02: Catálogo//
+
+//Sección 03: Recomendados//
+
+.recommended
+  margin-top: 10rem
+  margin-bottom: 5rem
+  text-align: center
+  &__card
+    margin-top: 3rem
+    margin-bottom: 3rem
+  &__items
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    gap: 1.5rem
+
+//Fin sección 03: Recomendados//
+
+//Sección 04: Autores//
+
+.authors
+  padding: 10rem 0
+  text-align: center
+
+//Swiper//
+
+.swiper
+  margin-top: 3rem
+  margin-bottom: 3rem
+  height: 26rem
+  &__link
+    display: block
+    height: 100%
+    transition: .3s
+  &__text
+    margin: 1rem 0
+    font-weight: 500
+
+.swiper-slide
+  text-align: center
+  font-size: 1rem
+  display: -webkit-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  flex-direction: column
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  -webkit-justify-content: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  -webkit-align-items: center
+  align-items: center
+
+.swiper-slide img
+  display: block
+  object-fit: cover
+  width: 20rem
+  height: 20rem
+  background-color: #E14D27
+  &:hover
+    opacity: .5
+
+.swiper-pagination-bullet
+  background-color: #151515 !important
+  &-active
+    background-color: #E14D27 !important
+
+//Fin sección 04: Autores//
+
+//Sección 05: Últimas noticias//
+
+.news
+  margin: 0 auto
+  max-width: 60rem
+  &__background
+    margin-top: 4rem
+    padding: 2rem 0 5rem 0
+    background-color: #51877E
+  &__card
+    display: flex
+    gap: 2.5rem
+    &-img
+      object-fit: cover
+      width: 21rem
+      height: 21rem
+    &-texts
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: start
+      gap: 1rem
+      text-align: start
+      width: 30vw
+    &-title
+      font-size: 1.25rem
+      font-weight: 500
+
+//Fin sección 05: Últimas noticias//
+
+//Sección 06: Redes sociales//
+
+.social-media
+  background-image: url("/img/nina-trenzas.png")
+  background-size: 55rem
+  background-repeat: no-repeat
+  background-position: right
+  box-sizing: border-box
+
+.socialMedia
+  margin: 0 auto
+  max-width: 60rem
+  padding: 8rem 0 12rem 0
+  &__texts
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: start
+    text-align: start
+    gap: 1rem
+    width: 18rem
+
+.instagram
+  font-size: .8rem
+  font-weight: 600
+  color: #E14D27
+  letter-spacing: .1rem
+  &:hover
+    text-decoration: underline
+    text-decoration-color: #E14D27
+    color: #E14D27
+    transition: .2s
+
+//Fin sección 06: Redes sociales//
