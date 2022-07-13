@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+    <meta name="theme-color" content="#151515">
+    <meta name="theme-color"
+          content="#151515"
+          media="(prefers-color-scheme: light)">
+    <meta name="theme-color"
+          content="#0b3e05"
+          media="(prefers-color-scheme: dark)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="Tu nombre">
+    <meta name="generator" content="Clojure">
+    <meta name="keywords" content="html, css, javascript">
+    <meta name="description" content="my description...">
+    <meta property="og:image" content="img/screenshot.png">
+    <meta property="og:title" content="The Rock">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@cuenta">
+    <meta name="twitter:creator" content="@cuenta">
+    <meta property="og:image:secure_url" content="https://...">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="">
+    <!--JavaScript-->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/sapps-studio/symbiosis-css/symbiosis.min.css">
+    <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+    <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 601px)">
+    <!-- Animation Animate.css -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header class="header"
+            x-data="{ open: false, isTopScroll: true }"
+            @scroll.window="isTopScroll = window.pageYOffset === 0"
+            :class="isTopScroll ? '' : 'header__black'"
+    >
+        <div class="container__header">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Niñas Malas" class="header__logo-size animate__animated animate__swing">
+                </a>
+            </div>
+            <!--Navbar-->
+            <nav class="nav" :class="open ? 'nav__show' : ''">
+                <button class="button header__boton-cerrar" @click="open = false">
+                    <img src="img/icons/close.png" alt="Cerrar menu" class="header__boton-cerrar-img">
+                </button>
+                <ul class="nav__lista">
+                    <li class="nav__item">
+                        <a href="catalogue.html" class="nav__link">CATÁLOGO</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="authors.html" class="nav__link">AUTORES</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="events.html" class="nav__link">EVENTOS</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="quienes-somos.html" class="nav__link">QUIÉNES SOMOS</a>
+                    </li>
+                </ul>
+                <div class="header__shopping">
+                    <img src="img/icons/icons-03.svg" alt="Carrito" class="header__shopping-img">
+                </div>
+            </nav>
+            <button class="button header__boton-abrir" @click="open = true">
+                <img src="img/icons/menu.png" alt="Abrir menu">
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="top-space">
+            <div class="events__elements events__container">
+                <h1>Próximos eventos</h1>
+                <article class="events__background">
+                    <div class="events">
+                        <div class="events__card">
+                            <div>
+                                <a href="#">
+                                    <img src="img/joaquin.jpg" alt="Joaquín Reyes" class="events__card-img">
+                                </a>
+                            </div>
+                            <div class="events__card-texts">
+                                <p class="events__card-title">Joaquín Reyes firma Subidón en Huelva</p>
+                                <p><span class="negrita">Librería Dorian,</span>
+                                    Arquitecto Pérez Carasa 20
+                                    Huelva</p>
+                                <p>
+                                    <a href="#" class="negrita">Ubicación en google Maps</a>
+                                </p>
+                                <p>Joaquín Reyes firma Subidón en Huelva el viernes 25 de marzo a las 18h en Librería Dorian (Arquitecto Pérez Carasa 20)
+                                    <br>¡Os esperamos!</p>
+                                <p>
+                                    <a href="#" class="button__general--black">Saber más</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <div class="separador">
+                    <img src="img/garabato.png" alt="niñas malas" class="events__img">
+                </div>
+                <article class="events__background">
+                    <div class="events">
+                        <div class="events__card">
+                            <div>
+                                <a href="#">
+                                    <img src="img/catalogo-libro06.jpg" alt="portada libro" class="events__card-img">
+                                </a>
+                            </div>
+                            <div class="events__card-texts">
+                                <p class="events__card-title">Club de lectura: cazadores de fantasmas, en Barcelona</p>
+                                <p><span class="negrita">La Ciutat Invisible,</span>
+                                    Riera d'Escuder, 38
+                                    Barcelona 08028</p>
+                                <p>
+                                    <a href="#" class="negrita">Ubicación en google Maps</a>
+                                </p>
+                                <p>El miércoles 20 de julio a las 19h, hemos organizado un club de lectura de Cazadores de fantasmas,
+                                    la fascinante, polémica y oscura novela de Robert David Chase...
+                                </p>
+                                <p>
+                                    <a href="#" class="button__general--black">Saber más</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__background--light">
+            <div class="footer__newsletter">
+                <h2>Newsletter para lectores irreverentes</h2>
+                <p class="footer__text">Apúntate y descubre cada mes todas las novelas contemporáneas. <br>
+                    ¡No dejes de leer!</p>
+                <div>
+                    ⬇
+                </div>
+                <p>
+                    <a href="#" class="button__general--orange">¡Suscríbete!</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer__background">
+            <div class="footer__info">
+                <div class="footer__logo">
+                    <a href="index.html">
+                        <img src="img/logo-white.png" alt="Logo niñas malas" class="footer__ninas-malas">
+                    </a>
+                </div>
+                <div class="footer__contact">
+                    <p class="footer__subtitle">Contacto</p>
+                    <p>
+                        <a href="#" class="footer__caption">
+                            (+34) 965 870 543
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#" class="footer__caption">
+                            info@ninasmalaseditorial.com
+                        </a>
+                    </p>
+                    <nav>
+                        <ul class="footer__redes">
+                            <li class="footer__li">
+                                <a href="#">
+                                    <img src="img/icons/icons-01.svg" alt="Logo ig" class="footer__icons">
+                                </a>
+                            </li>
+                            <li class="footer__li">
+                                <a href="#">
+                                    <img src="img/icons/icons-02.svg" alt="Logo tw" class="footer__icons">
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__legal-pages">
+                    <p class="footer__subtitle">Páginas legales</p>
+                    <p>
+                        <a href="aviso-legal.html" class="footer__caption" target="_blank">Aviso legal</a>
+                    </p>
+                    <p>
+                        <a href="cookies.html" class="footer__caption" target="_blank">Política de cookies</a>
+                    </p>
+                    <p>
+                        <a href="#" class="footer__caption">Condiciones de venta</a>
+                    </p>
+                    <p>
+                        <a href="#" class="footer__caption">Protección de datos</a>
+                    </p>
+                </div>
+                <div class="footer__copyright">
+                    <p class="footer__subtitle">Atención al cliente</p>
+                    <p>
+                        <a href="quienes-somos.html" class="footer__caption">Quiénes somos</a>
+                    </p>
+                    <p>
+                        <a href="#" class="footer__caption">Preguntas frecuentes</a>
+                    </p>
+                    <hr>
+                    <p class="footer__caption">©2022 Niñas Malas. <br>
+                        Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

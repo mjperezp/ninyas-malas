@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Libro</title>
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+    <meta name="theme-color" content="#151515">
+    <meta name="theme-color"
+          content="#151515"
+          media="(prefers-color-scheme: light)">
+    <meta name="theme-color"
+          content="#0b3e05"
+          media="(prefers-color-scheme: dark)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="Tu nombre">
+    <meta name="generator" content="Clojure">
+    <meta name="keywords" content="html, css, javascript">
+    <meta name="description" content="my description...">
+    <meta property="og:image" content="img/screenshot.png">
+    <meta property="og:title" content="The Rock">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@cuenta">
+    <meta name="twitter:creator" content="@cuenta">
+    <meta property="og:image:secure_url" content="https://...">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="">
+    <!--JavaScript-->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/sapps-studio/symbiosis-css/symbiosis.min.css">
+    <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+    <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 601px)">
+    <!-- Link Swiper's CSS -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/fontello.css">
+</head>
+<body>
+    <header class="header" x-data="{ open: false }">
+        <div class="container__header">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Niñas Malas" class="header__logo-size animate__animated animate__swing">
+                </a>
+            </div>
+            <!--Navbar-->
+            <nav class="nav" :class="open ? 'nav__show' : ''">
+                <button class="button header__boton-cerrar" @click="open = false">
+                    <img src="img/icons/close.png" alt="Cerrar menu" class="header__boton-cerrar-img">
+                </button>
+                <ul class="nav__lista">
+                    <li class="nav__item">
+                        <a href="catalogue.html" class="nav__link">CATÁLOGO</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="authors.html" class="nav__link">AUTORES</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="events.html" class="nav__link">EVENTOS</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="quienes-somos.html" class="nav__link">QUIÉNES SOMOS</a>
+                    </li>
+                </ul>
+                <div class="header__shopping">
+                    <img src="img/icons/icons-03.svg" alt="Carrito" class="header__shopping-img">
+                </div>
+            </nav>
+            <button class="button header__boton-abrir" @click="open = true">
+                <img src="img/icons/menu.png" alt="Abrir menu">
+            </button>
+        </div>
+    </header>
+    <main>
+        <!--Breadcrumbs-->
+        <div class="container__libro">
+            <nav class="breadcrumb">
+                <ol class="breadcrumb__nav">
+                    <li class="breadcrumb__li">
+                        <a href="#" class="breadcrumb__link">Libros</a>
+                    </li>
+                    <li class="breadcrumb__li">
+                        <a href="#" class="breadcrumb__link breadcrumb__mobile">Novela contemporánea</a>
+                    </li>
+                    <li class="breadcrumb__li">
+                        <a href="#" class="breadcrumb__link--activo">Fantasmas</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <!--Sección item-->
+        <section>
+            <!--Ficha técnica y fotos del producto-->
+            <div class="libro__fondo--azul">
+                <div class="libro__elementos">
+                    <div class="img__conjunto">
+                        <div class="portada">
+                            <img src="img/catalogo-libro08.jpg" alt="Fantasmas" class="libro__img--portada">
+                        </div>
+                        <div class="miniaturas">
+                            <div>
+                                <img src="img/catalogo-libro08.jpg" alt="Fantasmas" class="libro__img--miniatura">
+                            </div>
+                            <div>
+                                <img src="img/catalogo-libro08.jpg" alt="Fantasmas" class="libro__img--miniatura">
+                            </div>
+                            <div>
+                                <img src="img/catalogo-libro08.jpg" alt="Fantasmas" class="libro__img--miniatura">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="texts">
+                        <h2>Fantasmas</h2>
+                        <div class="title-opinions">
+                            <p>
+                                <a href="#" class="texts__title">Dolly Alderton</a>
+                            </p>
+                            <p>
+                                <a href="#" class="texts__opinions">4 opiniones</a>
+                            </p>
+                        </div>
+                        <p>
+                            <span class="negrita">Fecha de publicación:</span> junio, 2019 <br>
+                            <span class="negrita">Número de páginas:</span> 224 pags <br>
+                            <span class="negrita">Tamaño:</span> 210x140cm <br>
+                            <span class="negrita">Encuadernación:</span> rústica con solapas <br>
+                            <span class="negrita">ISBN:</span> 978-84-17059-04-0
+                        </p>
+                        <p class="texts__sinopsis">Sinopsis</p>
+                        <p>
+                            Nina y Lola son dos amigas de treinta y pocos: independientes y con éxito profesional, tienen la sensación que se...
+                        </p>
+                        <p>
+                            <a href="#" class="button__general--black">Ver más</a>
+                        </p>
+                    </div>
+                    <div class="format__options">
+                        <div class="format format__display">
+                            <p>Elige tu formato</p>
+                            <p>
+                                <input type="radio" name="tipodelibro">
+                                    Rústica con solapas <span class="negrita">18,90€</span>
+                                </input>
+                            </p>
+                            <p>
+                                <input type="radio" name="tipodelibro">
+                                    E-book <span class="negrita">8,99€</span>
+                                </input>
+                            </p>
+                        </div>
+                        <p>
+                            <a href="#" class="button__libro--comprar">Comprar</a>
+                        </p>
+                        <button class="button__libro--favoritos">
+                            <i class="icon-heart-empty"></i>
+                            <span>Añadir a favoritos</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Info del autor-->
+            <div class="libro__fondo--naranja">
+                <div class="container__secciones">
+                    <h2>Sobre la autora de: fantasmas</h2>
+                    <div class="autor__bloque">
+                        <div class="name-description">
+                            <p>Dolly Alderton</p>
+                            <p>
+                                Dolly Alderton es la autora de la exitosa autobiografía Todo lo que sé sobre el amor. Escribe para
+                                las revistas Grazia, Cosmopolitan, Marie Claire, Red, GQ, The Sunday Times y The Telegraph y tiene
+                                una columna semanal sobre citas en The Times. Junto con Pandora Sykes, es la co presentadora y
+                                co creadora del podcast The High Low, con un promedio de un millón de descargas al mes.
+
+                                Fantasmas, su primera incursión en la ficción, se ha convertido...
+                            </p>
+                        </div>
+                        <div class="img-button">
+                            <div>
+                                <img src="img/dolly-optimizada.jpg" alt="autora" class="img-autor">
+                            </div>
+                            <p>
+                                <a href="#" class="button__general--black">Leer más</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Libros recomendados del autor-->
+            <div class="libro__fondo--blanco">
+                <div class="container__secciones">
+                    <div class="title-bloque-recomendados">
+                        <h2>Otros libros de Dolly Alderton</h2>
+                        <div class="bloque__recomendados-autor">
+                            <div class="card__recomendados-autor">
+                                <img src="img/todo.jpg" alt="libro" class="catalogue__card-img">
+                                <p>
+                                    <a href="#" class="autor__card-title">Todo lo que sé...</a>
+                                </p>
+                                <p>
+                                    <a href="#" class="button__comprar-autor">Comprar</a>
+                                </p>
+                            </div>
+                            <div class="card__recomendados-autor">
+                                <img src="img/ghosts.jpg" alt="libro" class="catalogue__card-img">
+                                <p>
+                                    <a href="#" class="autor__card-title">Ghosts</a>
+                                </p>
+                                <p>
+                                    <a href="#" class="button__comprar-autor">Comprar</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Opiniones del libro-->
+            <div class="opinions">
+                <div class="container__secciones">
+                    <h2>Todas las opiniones de fantasmas</h2>
+                    <div class="opinions__texts">
+                        <p class="opinions__mark">8/10</p>
+                        <p class="opinions__caption">Basado en 4 comentarios</p>
+                    </div>
+                    <button class="button__general--black">Escribe tu opinión</button>
+                </div>
+            </div>
+            <!--Comentarios-->
+            <div class="container__secciones">
+                <div class="comments__header">
+                    <p class="comments__opinions">4 opiniones de usuarios</p>
+                    <!--Dropdown-->
+                    <div class="dropdown">
+                        <button class="dropdown__button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Más recientes
+                        </button>
+                        <div class="dropdown__icon">
+                            <img src="img/icons/arrow.png" alt="flecha" class="dropdown__img">
+                        </div>
+                    </div>
+                </div>
+                <!--Opiniones de usuarios-->
+                <div class="comments__main">
+                    <div class="container__secciones--comments">
+                        <div class="comments__section">
+                            <div class="comments__user">
+                                <div class="comments__user-gap">
+                                    <img src="img/icons/user.png" alt="icono user" class="comments__icons-user">
+                                    <p class="negrita">Inma Martín</p>
+                                    <p class="text-gray">19/12/2021</p>
+                                </div>
+                            </div>
+                            <div class="comments__stars">
+                                <div class="stars__group">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                </div>
+                                <p>Es sencillo de leer y se hace rápido, no es pesado en ningún momento. Ya seas joven o adulta te puedes sentir identificada en mayor o menor medida. Hay puntos de la historia donde te enfadas mucho ya que las situaciones son injustas y debido a que en muchas te identificas, yo lo he llegado a pensar en como me sentiria a mi. En general, lo recomiendo.</p>
+                            </div>
+                        </div>
+                        <div class="comments__section">
+                            <div class="comments__user">
+                                <div class="comments__user-gap">
+                                    <img src="img/icons/user.png" alt="icono user" class="comments__icons-user">
+                                    <p class="negrita">Sonia</p>
+                                    <p class="text-gray">01/09/2021</p>
+                                </div>
+                            </div>
+                            <div class="comments__stars">
+                                <div class="stars__group">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                </div>
+                                <p>Nada en esta cortísima novela es gratuito. Me ha resultado una lectura muy enriquecedora y necesaria, escrita con grandísima audacia. Podría parecer un ensayo por cómo refleja la realidad a la que nos tenemos que enfrentar las mujeres cada día. Un imprescindible y un grandísimo descubrimiento.</p>
+                            </div>
+                        </div>
+                        <div class="comments__section">
+                            <div class="comments__user">
+                                <div class="comments__user-gap">
+                                    <img src="img/icons/user.png" alt="icono user" class="comments__icons-user">
+                                    <p class="negrita">Verónica García</p>
+                                    <p class="text-gray">15/03/2022</p>
+                                </div>
+                            </div>
+                            <div class="comments__stars">
+                                <div class="stars__group">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                    <img src="img/icons/star%20(1).png" alt="icono user" class="comments__icons-stars">
+                                </div>
+                                <p>Lectura ligera, perfecta para acompañarte en la playa mientras tomas el sol, te sentirás un poco frustrada al identificarte con las situaciones y los pensamientos que tiene la protagonista.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments__button">
+                        <button class="button__general--black">Ver todas las opiniones (4)</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Recomendados-->
+        <section class="recommended">
+            <h1>Lo que te recomendamos</h1>
+            <div class="recommended__card">
+                <div class="recommended__items">
+                    <article class="catalogue__card-item">
+                        <div>
+                            <img src="img/recomendados-libro01.jpg" alt="Filosofía felina" class="catalogue__card-img">
+                        </div>
+                        <p class="catalogue__card-title">
+                            <a href="#">Filosofía felina: los gatos y el sentido de la vida</a>
+                        </p>
+                        <p class="catalogue__card-author">
+                            <a href="#">John N. Gray</a>
+                        </p>
+                        <p class="catalogue__card-price">14,95€</p>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </article>
+                    <article class="catalogue__card-item">
+                        <div>
+                            <img src="img/recomendados-libro02.jpg" alt="portada libro" class="catalogue__card-img">
+                        </div>
+                        <p class="catalogue__card-title">
+                            <a href="#">Celebramos la Navidad</a>
+                        </p>
+                        <p class="catalogue__card-author">
+                            <a href="#">Miriam Elia</a>
+                        </p>
+                        <p class="catalogue__card-price">9,40€</p>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </article>
+                    <article class="catalogue__card-item display__none-mobile">
+                        <div>
+                            <img src="img/recomendados-libro03.jpg" alt="portada libro" class="catalogue__card-img">
+                        </div>
+                        <p class="catalogue__card-title">
+                            <a href="#">Ready player two</a>
+                        </p>
+                        <p class="catalogue__card-author">
+                            <a href="#">Ernest Cline</a>
+                        </p>
+                        <p class="catalogue__card-price">18,90€</p>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </article>
+                    <article class="catalogue__card-item display__none-mobile">
+                        <div>
+                            <img src="img/recomendados-libro04.jpg" alt="portada libro" class="catalogue__card-img">
+                        </div>
+                        <p class="catalogue__card-title">
+                            <a href="#">Marcelo</a>
+                        </p>
+                        <p class="catalogue__card-author">
+                            <a href="#">Guillermo Fesser</a>
+                        </p>
+                        <p class="catalogue__card-price">21,37€</p>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </article>
+                </div>
+            </div>
+            <p class="button__general">
+                <a href="#">Ver más</a>
+            </p>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__background--light">
+            <div class="footer__newsletter">
+                <h2>Newsletter para lectores irreverentes</h2>
+                <p class="footer__text">Apúntate y descubre cada mes todas las novelas contemporáneas. <br>
+                    ¡No dejes de leer!</p>
+                <div>
+                    ⬇
+                </div>
+                <p>
+                    <a href="#" class="button__general--orange">¡Suscríbete!</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer__background">
+            <div class="footer__info">
+                <div class="footer__logo">
+                    <a href="index.html">
+                        <img src="img/logo-white.png" alt="Logo niñas malas" class="footer__ninas-malas">
+                    </a>
+                </div>
+                <div class="footer__contact">
+                    <p class="footer__subtitle">Contacto</p>
+                    <p>
+                        <a href="#" class="footer__caption">
+                            (+34) 965 870 543
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#" class="footer__caption">
+                            info@ninasmalaseditorial.com
+                        </a>
+                    </p>
+                    <nav>
+                        <ul class="footer__redes">
+                            <li class="footer__li">
+                                <a href="#">
+                                    <img src="img/icons/icons-01.svg" alt="Logo ig" class="footer__icons">
+                                </a>
+                            </li>
+                            <li class="footer__li">
+                                <a href="#">
+                                    <img src="img/icons/icons-02.svg" alt="Logo tw" class="footer__icons">
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__legal-pages">
+                    <p class="footer__subtitle">Páginas legales</p>
+                    <p>
+                        <a href="aviso-legal.html" class="footer__caption" target="_blank">Aviso legal</a>
+                    </p>
+                    <p>
+                        <a href="cookies.html" class="footer__caption" target="_blank">Política de cookies</a>
+                    </p>
+                    <p>
+                        <a href="#" class="footer__caption">Condiciones de venta</a>
+                    </p>
+                    <p>
+                        <a href="#" class="footer__caption">Protección de datos</a>
+                    </p>
+                </div>
+                <div class="footer__copyright">
+                    <p class="footer__subtitle">Atención al cliente</p>
+                    <p>
+                        <a href="quienes-somos.html" class="footer__caption">Quiénes somos</a>
+                    </p>
+                    <p>
+                        <a href="#" class="footer__caption">Preguntas frecuentes</a>
+                    </p>
+                    <hr>
+                    <p class="footer__caption">©2022 Niñas Malas. <br>
+                        Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

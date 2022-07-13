@@ -1,0 +1,58 @@
+.header
+  &__shopping
+    padding: 1rem
+  &__shopping-img
+    display: none
+  &__logo-size
+    width: 4rem
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+  &__boton-cerrar
+    grid-column: 3 / 4
+    grid-row: 1 / 2
+    padding: 1rem -2rem
+    background-color: inherit
+    border: none
+    margin-top: 2rem
+    &-img
+      width: 1.2rem
+  &__boton-abrir
+    background-color: inherit
+    border: none
+    width: 2rem
+  .nav
+    display: grid
+    $tamanyoColumna: 4rem
+    grid-template-columns: $tamanyoColumna 1fr $tamanyoColumna
+    grid-template-rows: $tamanyoColumna 1fr $tamanyoColumna
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #151515
+    color: white
+    font-weight: 500
+    transition: .5s
+    transform: translateX(-100vw)
+    &__show
+      transform: translateX(0)
+    &__lista
+      grid-column: 2 / 3
+      grid-row: 2 / 3
+      list-style: none
+      padding: 0
+      display: flex
+      flex-direction: column
+      justify-content: space-evenly
+      align-items: center
+    &__link
+      display: block
+      font-size: 1.2rem
+      padding: 2rem

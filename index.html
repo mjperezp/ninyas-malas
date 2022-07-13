@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Niñas malas</title>
+    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+    <meta name="theme-color" content="#151515">
+    <meta name="theme-color"
+          content="#151515"
+          media="(prefers-color-scheme: light)">
+    <meta name="theme-color"
+          content="#0b3e05"
+          media="(prefers-color-scheme: dark)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="Tu nombre">
+    <meta name="generator" content="Clojure">
+    <meta name="keywords" content="html, css, javascript">
+    <meta name="description" content="my description...">
+    <meta property="og:image" content="img/screenshot.png">
+    <meta property="og:title" content="The Rock">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@cuenta">
+    <meta name="twitter:creator" content="@cuenta">
+    <meta property="og:image:secure_url" content="https://...">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="">
+    <!--JavaScript-->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/sapps-studio/symbiosis-css/symbiosis.min.css">
+    <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+    <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 601px)">
+    <!-- Animation Animate.css -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header class="header"
+            x-data="{ open: false, isTopScroll: true }"
+            @scroll.window="isTopScroll = window.pageYOffset === 0"
+            :class="isTopScroll ? '' : 'header__black'"
+    >
+        <div class="container__header">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Niñas Malas" class="header__logo-size animate__animated animate__swing">
+                </a>
+            </div>
+            <!--Navbar-->
+            <nav class="nav" :class="open ? 'nav__show' : ''">
+                <button class="button header__boton-cerrar" @click="open = false">
+                    <img src="img/icons/close.png" alt="Cerrar menu" class="header__boton-cerrar-img">
+                </button>
+                <ul class="nav__lista">
+                    <li class="nav__item">
+                        <a href="catalogue.html" class="nav__link">CATÁLOGO</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="authors.html" class="nav__link">AUTORES</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="events.html" class="nav__link">EVENTOS</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="quienes-somos.html" class="nav__link">QUIÉNES SOMOS</a>
+                    </li>
+                </ul>
+                <div class="header__shopping">
+                    <img src="img/icons/icons-03.svg" alt="Carrito" class="header__shopping-img">
+                </div>
+            </nav>
+            <button class="button header__boton-abrir" @click="open = true">
+                <img src="img/icons/menu.png" alt="Abrir menu">
+            </button>
+        </div>
+    </header>
+    <main>
+        <!--Coockies-->
+        <section id="cookies" class="modal-cookies cookies">
+            <p>Utilizamos cookies propias de terceros para fines analíticos y para mostrarte publicidad y contenido personalizado en base a un perfil elaborado a partir de tus hábitos de navegación. Puedes aceptar todas las cookies o gestionar tus preferencias en el panel de configuración.</p>
+            <p>
+                Consulta más información en <a href="cookies.html" class="modal-cookies__link" target="_blank">Política de cookies.</a>
+            </p>
+            <div class="modal-cookies__buttons">
+                <button id="deny-button" class="modal-cookies__button">
+                    Configurar cookies
+                </button>
+                <button id="accept-button" class="modal-cookies__button-accept">
+                    Aceptar todas
+                </button>
+            </div>
+        </section>
+        <!--Presentación/intro-->
+        <section class="intro">
+            <div class="intro__img">
+                <img src="img/ninas-malas.png" alt="Niñas Malas" class="intro__img-size">
+            </div>
+            <div class="intro__block">
+                <div>
+                    <img src="img/logo.png" alt="Niñas Malas" class="logo-img">
+                </div>
+                <p class="intro__block-description">
+                    Niñas Malas editorial es el lugar de encuentro
+                    del lector joven e irreverente que le importa
+                    poco o nada lo que piensen de él/ella.
+                </p>
+                <p class="center">
+                    <a href="#" class="button__general--black">Saber más</a>
+                </p>
+            </div>
+        </section>
+        <!--Catálogo-->
+        <section class="catalogue">
+            <h1>Catálogo</h1>
+            <div class="container__catalogue catalogue__grid">
+                <article class="catalogue__card">
+                    <div class="catalogue__card-border">
+                        <div>
+                            <a href="#">
+                                <img src="img/catalogo-libro01.jpg" alt="Yo soy así" class="catalogue__card-img">
+                            </a>
+                        </div>
+                        <div class="catalogue__card-item">
+                            <p class="catalogue__card-title">
+                                <a href="#" class="overflow">Yo soy así</a>
+                            </p>
+                            <p class="catalogue__card-author">
+                                <a href="#" class="overflow">Fernando Trías</a>
+                            </p>
+                            <p class="catalogue__card-price">25,00€</p>
+                        </div>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </div>
+                </article>
+                <article class="catalogue__card">
+                    <div class="catalogue__card-border">
+                        <div>
+                            <a href="#">
+                                <img src="img/catalogo-libro02.jpg" alt="El año del pensamiento mágico" class="catalogue__card-img">
+                            </a>
+                        </div>
+                        <div class="catalogue__card-item">
+                            <p class="catalogue__card-title">
+                                <a href="#" class="overflow">El año del pensamiento mágico</a>
+                            </p>
+                            <p class="catalogue__card-author">
+                                <a href="#" class="overflow">Joan Didion</a>
+                            </p>
+                            <p class="catalogue__card-price">19,90€</p>
+                        </div>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </div>
+                </article>
+                <article class="catalogue__card">
+                    <div class="catalogue__card-border">
+                        <div>
+                            <a href="#">
+                                <img src="img/catalogo-libro03.jpg" alt="American Psycho" class="catalogue__card-img">
+                            </a>
+                        </div>
+                        <div class="catalogue__card-item">
+                            <p class="catalogue__card-title">
+                                <a href="#" class="overflow">American Psycho</a>
+                            </p>
+                            <p class="catalogue__card-author">
+                                <a href="#" class="overflow">Bret Easton Ellis</a>
+                            </p>
+                            <p class="catalogue__card-price">16,00€</p>
+                        </div>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </div>
+                </article>
+                <article class="catalogue__card">
+                    <div class="catalogue__card-border">
+                        <div>
+                            <a href="#">
+                                <img src="img/catalogo-libro04.jpg" alt="Lobo: el camino de la venganza" class="catalogue__card-img">
+                            </a>
+                        </div>
+                        <div class="catalogue__card-item">
+                            <p class="catalogue__card-title">
+                                <a href="#" class="overflow">Lobo: el camino de la venganza</a>
+                            </p>
+                            <p class="catalogue__card-author">
+                                <a href="#" class="overflow">Patricia García-Rojo Cantón</a>
+                            </p>
+                            <p class="catalogue__card-price">11,95€</p>
+                        </div>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </div>
+                </article>
+                <article class="catalogue__card">
+                    <div class="catalogue__card-border">
+                        <div>
+                            <a href="#">
+                                <img src="img/catalogo-libro05.jpg" alt="Un hombre con un tenedor en una tierra de sopas" class="catalogue__card-img">
+                            </a>
+                        </div>
+                        <div class="catalogue__card-item">
+                            <p class="catalogue__card-title">
+                                <a href="#" class="overflow">Un hombre con un tenedor en una tierra de sopas</a>
+                            </p>
+                            <p class="catalogue__card-author">
+                                <a href="#" class="overflow">Jordi Sierra i Fabra</a>
+                            </p>
+                            <p class="catalogue__card-price">19,90€</p>
+                        </div>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </div>
+                </article>
+                <article class="catalogue__card">
+                    <div class="catalogue__card-border">
+                        <div>
+                            <a href="#">
+                                <img src="img/catalogo-libro06.jpg" alt="Cazadores de fantasmas" class="catalogue__card-img">
+                            </a>
+                        </div>
+                        <div class="catalogue__card-item">
+                            <p class="catalogue__card-title">
+                                <a href="#" class="overflow">Cazadores de fantasmas</a>
+                            </p>
+                            <p class="catalogue__card-author">
+                                <a href="#" class="overflow">Ed Warren - Lorraine Warren</a>
+                            </p>
+                            <p class="catalogue__card-price">12,00€</p>
+                        </div>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <p>
+                <a href="#" class="button__general">Ver catálogo</a>
+            </p>
+        </section>
+        <!--Recomendados-->
+        <section class="recommended">
+            <h1>Lo que te recomendamos</h1>
+            <div class="recommended__card">
+                <div class="recommended__items">
+                    <article class="catalogue__card-item">
+                        <div>
+                            <img src="img/recomendados-libro01.jpg" alt="Filosofía felina" class="catalogue__card-img">
+                        </div>
+                        <p class="catalogue__card-title">
+                            <a href="#">Filosofía felina: los gatos y el sentido de la vida</a>
+                        </p>
+                        <p class="catalogue__card-author">
+                            <a href="#">John N. Gray</a>
+                        </p>
+                        <p class="catalogue__card-price">14,95€</p>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </article>
+                    <article class="catalogue__card-item">
+                        <div>
+                            <img src="img/recomendados-libro02.jpg" alt="portada libro" class="catalogue__card-img">
+                        </div>
+                        <p class="catalogue__card-title">
+                            <a href="#">Celebramos la Navidad</a>
+                        </p>
+                        <p class="catalogue__card-author">
+                            <a href="#">Miriam Elia</a>
+                        </p>
+                        <p class="catalogue__card-price">9,40€</p>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </article>
+                    <article class="catalogue__card-item display__none-mobile">
+                        <div>
+                            <img src="img/recomendados-libro03.jpg" alt="portada libro" class="catalogue__card-img">
+                        </div>
+                        <p class="catalogue__card-title">
+                            <a href="#">Ready player two</a>
+                        </p>
+                        <p class="catalogue__card-author">
+                            <a href="#">Ernest Cline</a>
+                        </p>
+                        <p class="catalogue__card-price">18,90€</p>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </article>
+                    <article class="catalogue__card-item display__none-mobile">
+                        <div>
+                            <img src="img/recomendados-libro04.jpg" alt="portada libro" class="catalogue__card-img">
+                        </div>
+                        <p class="catalogue__card-title">
+                            <a href="#">Marcelo</a>
+                        </p>
+                        <p class="catalogue__card-author">
+                            <a href="#">Guillermo Fesser</a>
+                        </p>
+                        <p class="catalogue__card-price">21,37€</p>
+                        <p>
+                            <a href="#" class="button__comprar">Comprar</a>
+                        </p>
+                    </article>
+                </div>
+            </div>
+            <p class="button__general">
+                <a href="#">Ver más</a>
+            </p>
+        </section>
+        <!--Autores-->
+        <section class="container__authors">
+            <h1>Nuestros autores</h1>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="swiper__link">
+                            <p> <!--poner aquí el color de fondo naranja-->
+                                <img src="img/autor01-optimizada.jpg" alt="autor">
+                            </p>
+                            <p class="swiper__text">
+                                F. A. HARROLD
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="swiper__link">
+                            <p>
+                                <img src="img/autor02-optimizada.jpg" alt="autor">
+                            </p>
+                            <p class="swiper__text">
+                                ANDREI FINE
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="swiper__link">
+                            <p>
+                                <img src="img/autor03-optimizada.jpg" alt="autor">
+                            </p>
+                            <p class="swiper__text">
+                                ANNA MILLER
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="swiper__link">
+                            <p>
+                                <img src="img/autor04-optimizada.jpg" alt="autor">
+                            </p>
+                            <p class="swiper__text">
+                                PAOLO ARMENI
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="swiper__link">
+                            <p>
+                                <img src="img/autor05-optimizada.jpg" alt="autor">
+                            </p>
+                            <p class="swiper__text">
+                                GRACE METALIOUS
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="swiper__link">
+                            <p>
+                                <img src="img/autor06-optimizada.jpg" alt="autor">
+                            </p>
+                            <p class="swiper__text">
+                                JONATHAN AUXIER
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="swiper__link">
+                            <p>
+                                <img src="img/autor07-optimizada.jpg" alt="autor">
+                            </p>
+                            <p class="swiper__text">
+                                JULIA VIEJO
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="swiper__link">
+                            <p>
+                                <img src="img/autor08-optimizada.jpg" alt="autor">
+                            </p>
+                            <p class="swiper__text">
+                                TIFFANY WATT
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="swiper__link">
+                            <p>
+                                <img src="img/autor09-optimizada.jpg" alt="autor">
+                            </p>
+                            <p class="swiper__text">
+                                ELISA VICTORIA
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <p class="center">
+                <a href="#" class="button__general">Ver autores</a>
+            </p>
+        </section>
+        <!--Noticias-->
+        <section class="news__background">
+            <div class="news">
+                <h1>Lo último</h1>
+                <div class="news__card">
+                    <div>
+                        <a href="#">
+                            <img src="img/joaquin.jpg" alt="Joaquín Reyes" class="news__card-img">
+                        </a>
+                    </div>
+                    <div class="news__card-texts">
+                        <p class="news__card-title">Joaquín Reyes firma Subidón en Huelva</p>
+                        <p><span class="negrita">Librería Dorian,</span>
+                            Arquitecto Pérez Carasa 20
+                            Huelva</p>
+                        <p>
+                            <a href="#" class="negrita">Ubicación en google Maps</a>
+                        </p>
+                        <p>Joaquín Reyes firma Subidón en Huelva el viernes 25 de marzo a las 18h en Librería Dorian (Arquitecto Pérez Carasa 20)
+                            <br>¡Os esperamos!</p>
+                        <p>
+                            <a href="#" class="button__general--black">Saber más</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Follow us on Instagram-->
+        <section class="social-media">
+            <div class="socialMedia">
+                <div class="socialMedia__texts">
+                    <h1>¡Hey!</h1>
+                    <p><span class="negrita">¿Ya nos sigues en Instagram? <br>
+                    </span>¡Síguenos o te rayaremos tus libros!</p>
+                    <p>
+                        <a href="#" class="negrita instagram">INSTAGRAM</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__background--light">
+            <div class="footer__newsletter">
+                <h2>Newsletter para lectores irreverentes</h2>
+                <p class="footer__text">Apúntate y descubre cada mes todas las novelas contemporáneas. <br>
+                    ¡No dejes de leer!</p>
+                <div>
+                    ⬇
+                </div>
+                <p>
+                    <a href="#" class="button__general--orange">¡Suscríbete!</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer__background">
+            <div class="footer__info">
+                <div class="footer__logo">
+                    <a href="index.html">
+                        <img src="img/logo-white.png" alt="Logo niñas malas" class="footer__ninas-malas">
+                    </a>
+                </div>
+                <div class="footer__contact">
+                    <p class="footer__subtitle">Contacto</p>
+                    <p>
+                        <a href="#" class="footer__caption">
+                            (+34) 965 870 543
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#" class="footer__caption">
+                            info@ninasmalaseditorial.com
+                        </a>
+                    </p>
+                    <nav>
+                        <ul class="footer__redes">
+                            <li class="footer__li">
+                                <a href="#">
+                                    <img src="img/icons/icons-01.svg" alt="Logo ig" class="footer__icons">
+                                </a>
+                            </li>
+                            <li class="footer__li">
+                                <a href="#">
+                                    <img src="img/icons/icons-02.svg" alt="Logo tw" class="footer__icons">
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__legal-pages">
+                    <p class="footer__subtitle">Páginas legales</p>
+                    <p>
+                        <a href="aviso-legal.html" class="footer__caption" target="_blank">Aviso legal</a>
+                    </p>
+                    <p>
+                        <a href="cookies.html" class="footer__caption" target="_blank">Política de cookies</a>
+                    </p>
+                    <p>
+                        <a href="#" class="footer__caption">Condiciones de venta</a>
+                    </p>
+                    <p>
+                        <a href="#" class="footer__caption">Protección de datos</a>
+                    </p>
+                </div>
+                <div class="footer__copyright">
+                    <p class="footer__subtitle">Atención al cliente</p>
+                    <p>
+                        <a href="quienes-somos.html" class="footer__caption">Quiénes somos</a>
+                    </p>
+                    <p>
+                        <a href="#" class="footer__caption">Preguntas frecuentes</a>
+                    </p>
+                    <hr>
+                    <p class="footer__caption">©2022 Niñas Malas. <br>
+                        Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        //Variables
+        const deny = document.querySelector('#deny-button');
+        const accept = document.querySelector('#accept-button');
+        const cookies = document.querySelector('#cookies');
+
+        //Eventos
+        accept.addEventListener('click', () => {
+            cookies.classList.add('hide');
+        })
+        deny.addEventListener('click', () => {
+            cookies.classList.add('hide');
+        })
+    </script>
+</body>
+</html>

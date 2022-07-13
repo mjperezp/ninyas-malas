@@ -1,0 +1,239 @@
+.container__libro
+  margin-top: 10rem
+  padding: 1rem
+
+.text-gray
+  color: #646464
+
+//Breadcrumb//
+
+.breadcrumb
+  padding-bottom: 2rem
+  &__mobile
+    display: block
+    width: 6rem
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+  &__nav
+    padding: 0 1rem
+    display: flex
+    gap: 1rem
+  &__li
+    list-style: none
+  &__link
+    color: #707070
+    &--activo
+      color: #151515
+      font-weight: 500
+      &::before
+        content: "/"
+        color: #707070
+        padding-right: .8rem
+  &__link::after
+    content: "/"
+    color: #707070
+    padding-left: .8rem
+
+.libro
+  &__fondo
+    &--azul
+      background-color: #ADCAD4
+      padding: 5rem 1rem
+    &--naranja
+      background-color: #E14D27
+      padding: 5rem 1rem
+    &--blanco
+      padding: 5rem 1rem
+  &__elementos
+    display: flex
+    flex-direction: column
+  &__img--portada
+    height: 100%
+    object-fit: cover
+
+.img__conjunto
+  display: grid
+  grid-template-columns: 3fr 1fr
+  grid-template-rows: 1fr
+  gap: 1rem
+
+.portada
+  grid-column: 1 / 2
+
+.miniaturas
+  grid-column: 2 / 3
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+
+//Fin breadcrumb//
+
+//Descripción libro//
+
+.texts
+  display: flex
+  flex-direction: column
+  gap: 1rem
+  &__title
+    color: #E14D27
+    font-size: 1rem
+    font-weight: 300
+  &__opinions
+    font-size: .75rem
+    font-weight: 500
+  &__sinopsis
+    font-size: 1.25rem
+    font-weight: 500
+
+.title-opinions
+  display: flex
+  flex-direction: column
+  gap: .2rem
+
+//Fin descripción libro//
+
+//Elegir formato//
+
+.format
+  margin-top: 1rem
+  background-color: #ffffff
+  color: #151515
+  border-radius: .2rem
+  padding: 1.5rem
+  height: 9rem
+  &__display
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: start
+    gap: .6rem
+  &__options
+    display: flex
+    flex-direction: column
+
+//Fin elegir formato//
+
+//Sección autora//
+
+.name-description
+  padding-top: 2rem
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+.img-autor
+  width: 100%
+  margin-top: 0
+  margin-bottom: 1rem
+
+.autor
+  &__bloque
+    display: flex
+    flex-direction: column
+    gap: 2rem
+  &__card-title
+    font-size: 1rem
+    font-weight: 500
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+.card__recomendados-autor
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  text-align: center
+  gap: .5rem
+
+.bloque__recomendados-autor
+  display: flex
+  gap: 2rem
+
+.title-bloque-recomendados
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+
+//Opiniones//
+
+.opinions
+  padding: 3rem 1rem
+  &__texts
+    display: flex
+    justify-content: start
+    align-items: center
+    gap: 1rem
+    margin-top: 2rem
+    margin-bottom: 1rem
+  &__mark
+    font-size: 1rem
+    font-weight: 700
+  &__caption
+    font-size: 1rem
+
+//Comentarios//
+
+.comments
+  padding: 3rem 1rem
+  &__header
+    display: flex
+    flex-direction: column
+    justify-content: start
+    margin-bottom: 3rem
+    gap: 1rem
+  &__main
+    margin: 2rem 0
+    display: flex
+    flex-direction: column
+    gap: 4rem
+  &__opinions
+    color: #646464
+  &__section
+    display: flex
+    flex-direction: column
+    gap: 1rem
+  &__user
+    display: flex
+    flex-direction: column
+    &-gap
+      display: flex
+      flex-direction: column
+      gap: .5rem
+      width: 5.5rem
+  &__stars
+    display: flex
+    flex-direction: column
+    gap: 1rem
+  &__icons-user
+    width: 2.5rem
+  &__icons-stars
+    width: 1rem
+  &__button
+    text-align: center
+
+.stars__group
+  display: flex
+  gap: .5rem
+
+.dropdown
+  &__button
+    width: 100%
+
+.container__secciones
+  padding: 1rem
+  &--comments
+    display: flex
+    flex-direction: column
+    gap: 4rem
+
+//Recomendados//
+
+.recommended
+  margin-top: 2rem
+
+
+
